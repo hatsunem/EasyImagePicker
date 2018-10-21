@@ -43,7 +43,9 @@ public class EasyImagePicker {
         gesture.callback = { touch, gesture in
             switch gesture.state {
             case .possible:
+                self.popView.isHidden = true
                 if let imageView = touch.view as? UIImageView, let image = imageView.image {
+                    view.bringSubview(toFront: self.dragImageView)
                     self.dragImageView.image = image
                     self.dragImageView.frame = imageView.superview?.convert(imageView.frame, to: view.superview) ?? imageView.frame
                 }
@@ -85,6 +87,8 @@ public class EasyImagePicker {
         gesture.callback2 = { touch, gesture in
             guard let image = self.dragImageView.image else { return }
             AudioServicesPlaySystemSound(1520)
+            self.popView.isHidden = false
+            view.superview?.bringSubview(toFront: self.popView)
             self.dragImageView.isHidden = true
             self.popView.isHidden = false
             self.popImageView.image = image
