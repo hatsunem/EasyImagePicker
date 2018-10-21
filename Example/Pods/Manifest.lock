@@ -1,0 +1,16 @@
+PODS:
+  - EasyImagePicker (0.1.0)
+
+DEPENDENCIES:
+  - EasyImagePicker (from `../`)
+
+EXTERNAL SOURCES:
+  EasyImagePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EasyImagePicker: 84e76ca5a521943040ecb48ecc6bae39ed34e719
+
+PODFILE CHECKSUM: ca9c88783e448d2929aa8dc269ebf60c4d4398e7
+
+COCOAPODS: 1.5.3

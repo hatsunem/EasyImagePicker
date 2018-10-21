@@ -1,0 +1,22 @@
+{
+  "name": "EasyImagePicker",
+  "version": "0.1.0",
+  "summary": "A short description of EasyImagePicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hatsunem/EasyImagePicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hatsunem": "1029286276@example.com"
+  },
+  "source": {
+    "git": "https://github.com/hatsunem/EasyImagePicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EasyImagePicker/Classes/**/*"
+}
