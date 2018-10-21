@@ -29,7 +29,11 @@ public class EasyImagePicker {
         popImageView.contentMode = .scaleAspectFit
         popView.addSubview(popImageView)
         
-        popView.backgroundColor = .red
+        popView.backgroundColor = .white
+        popView.layer.borderWidth = 1.0
+        popView.layer.borderColor = (UIColor.lightGray).cgColor
+        popView.layer.cornerRadius = 10
+        popView.clipsToBounds = true
         popView.isHidden = true
         view.superview?.addSubview(popView)
         

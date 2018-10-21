@@ -16,6 +16,7 @@ class ViewController: UIViewController, EasyImagePickerProtocol {
     var dragImageView = UIImageView()
     var popImageView = UIImageView()
     var popView = UIView()
+    var cameraLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +25,26 @@ class ViewController: UIViewController, EasyImagePickerProtocol {
         let height = self.view.frame.height
         let width = self.view.frame.width
         photoView.frame = CGRect(x: 0, y: height - 200, width: width, height: 200)
-        photoView.backgroundColor = UIColor.lightGray
+        photoView.backgroundColor = .white
         view.addSubview(photoView)
+        
+        cameraLabel.text = "カメラロール"
+        cameraLabel.textAlignment = .center
+        let color = UIColor(red: 153/255, green: 255/255, blue: 204/255, alpha: 1)
+        cameraLabel.backgroundColor = color
+        cameraLabel.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 30)
+        photoView.addSubview(cameraLabel)
         
         imageView1.image = UIImage(named: "flower1")
         imageView1.clipsToBounds = true
-        imageView1.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        imageView1.frame = CGRect(x: 0, y: 30, width: 100, height: 100)
         imageView1.contentMode = .scaleAspectFill
         imageView1.isUserInteractionEnabled = true
         photoView.addSubview(imageView1)
         
         imageView2.image = UIImage(named: "flower2")
         imageView2.clipsToBounds = true
-        imageView2.frame = CGRect(x: 120, y: 0, width: 100, height: 100)
+        imageView2.frame = CGRect(x: 105, y: 30, width: 100, height: 100)
         imageView2.contentMode = .scaleAspectFill
         imageView2.isUserInteractionEnabled = true
         photoView.addSubview(imageView2)
